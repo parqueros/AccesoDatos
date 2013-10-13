@@ -1,4 +1,4 @@
-package ad2_manejoficheros;
+package ud2_manejoficheros;
 
 import java.io.*;
 import java.util.Scanner;
