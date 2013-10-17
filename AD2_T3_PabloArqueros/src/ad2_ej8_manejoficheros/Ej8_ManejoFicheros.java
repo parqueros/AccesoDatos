@@ -223,7 +223,7 @@ public class Ej8_ManejoFicheros {
 
         try (PrintWriter salida = new PrintWriter(nomArchivo)) {
             String cadena;
-            System.out.println("Introduce texto. Para acabar introduce la cadena FIN:");
+            System.out.println("Introduce texto. Para acabar introduce la cadena FIN en una linea nueva:");
             cadena = sc.nextLine();
             while (!cadena.equalsIgnoreCase("FIN")) {
                 salida.println(cadena);
