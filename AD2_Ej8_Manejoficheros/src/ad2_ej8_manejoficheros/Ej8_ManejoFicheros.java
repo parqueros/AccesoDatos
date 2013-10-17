@@ -69,7 +69,7 @@ public class Ej8_ManejoFicheros {
         FileInputStream f = null;
 
         try {
-//            File fichero = new File("parrafo2.txt");
+
 
             // ver si el fichero no existe
             if (!fichero.exists()) {
