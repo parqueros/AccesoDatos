@@ -16,7 +16,6 @@ import java.io.RandomAccessFile;
 public class Ej10 {
 
 
-
     public static void EscribeFichAleatorio() throws IOException {
 
         File fichero = new File("EmpleAleatorio.dat"); //fichero
@@ -113,4 +112,5 @@ public class Ej10 {
 
         file.close();
     }
+    
 }
