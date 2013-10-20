@@ -50,8 +50,9 @@ public class Ej11 {
         char apellido[] = new char[10], aux;
         posicion = 0; //para situarnos al principio
         file.seek(posicion); /*con while *///apuntador de fichero se sitúa en posicion
+        System.out.printf("%-4s%-12s%-6s%-8s\n","ID","Apellido","Dept","Salario");
         while (file.getFilePointer() < file.length() - 36) { /*con while */
-            //for(;;){
+            
             file.seek(posicion); //apuntador de fichero se sitúa en posicion
             id = file.readInt(); //obtener id de empleado
             for (int i = 0; i < apellido.length; i++) {
@@ -61,12 +62,12 @@ public class Ej11 {
             String apellidos = new String(apellido); //convierto a String el array 
             dep = file.readInt(); //obtengo dep
             salario = file.readDouble(); //obtengo salario
-
-            //  CAMBIAR POR UN PRINTF
-            System.out.println("ID: " + id + ", Apellido: " + apellidos
-                    + ", Departamento: " + dep + ", Salario:" + salario);
+   
+            //muestro por pantalla los datos de los empleados
+            System.out.printf("%-4s%-12s%-6s%-8s\n",id, apellidos, dep, salario);
             posicion += 36; //cada empleado ocupa 36 bytes (4+20+4+8)
-            //if(file.getFilePointer() == file.length()) break; //sale del bucle
+            
+            //posiciono el apuntador
             file.seek(posicion); /*con while */
         }
 

@@ -51,8 +51,9 @@ public class Ej10 {
         char apellido[] = new char[10], aux;
         posicion = 0; //para situarnos al principio
         file.seek(posicion); /*con while *///apuntador de fichero se sitúa en posicion
+        System.out.printf("%-4s%-12s%-6s%-8s\n","ID","Apellido","Dept","Salario");
         while (file.getFilePointer() < file.length() - 36) { /*con while */
-            //for(;;){
+            
             file.seek(posicion); //apuntador de fichero se sitúa en posicion
             id = file.readInt(); //obtener id de empleado
             for (int i = 0; i < apellido.length; i++) {
@@ -63,12 +64,13 @@ public class Ej10 {
             dep = file.readInt(); //obtengo dep
             salario = file.readDouble(); //obtengo salario
 
-            //  CAMBIAR POR UN PRINTF
-            System.out.println("ID: " + id + ", Apellido: " + apellidos
-                    + ", Departamento: " + dep + ", Salario:" + salario);
+            //muestro por pantalla los datos de los empleados
+            System.out.printf("%-4s%-12s%-6s%-8s\n",id, apellidos, dep, salario);
+            
             posicion += 36; //cada empleado ocupa 36 bytes (4+20+4+8)
-            //if(file.getFilePointer() == file.length()) break; //sale del bucle
-            file.seek(posicion); /*con while */
+            
+            //posiciono el apuntador
+            file.seek(posicion); 
         }
 
         file.close(); //cerrar fichero
@@ -91,7 +93,7 @@ public class Ej10 {
             char apellido[] = new char[10], aux;
             int dep;
             Double salario;
-
+            
             for (int i = 0; i < apellido.length; i++) {
                 aux = file.readChar();//recorremos uno a uno los caracteres del apellido
                 apellido[i] = aux; //los voy guardando en el array
@@ -101,13 +103,11 @@ public class Ej10 {
             dep = file.readInt(); //obtengo dep
             salario = file.readDouble(); //obtengo salario
 
-            System.out.println("El empleado buscado es: \n");
-
-            System.out.printf("Apellidos: %s, Departamento: %d, Salario: %.2f\n", apellidos, dep, salario);
-            posicion += 40; //cada empleado ocupa 36 bytes (4+20+4+8)
-            //if(file.getFilePointer() == file.length()) break; //sale del bucle
-            file.seek(posicion); /*con while */
-
+            //muestro por pantalla los datos del empleado buscado
+            System.out.printf("El empleado buscado es: \n\n");
+            System.out.printf("%-12s%-6s%-8s\n\n","Apellido","Dept","Salario");
+            System.out.printf("%-12s%-6d%.2f\n", apellidos, dep, salario);
+            
         }
 
         file.close();
