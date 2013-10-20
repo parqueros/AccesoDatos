@@ -46,8 +46,6 @@ public class Menu {
         return caracter;
     }
 
-//    E: cad => cadena de caracteres
-//    S: nada, imprime por pantalla dicha cadena de caracteres rodeada por asteriscos.
     public static int leer_entero(String mensaje) {
         // crea objeto entrada de la clase Scanner para la lectura desde la consola
         Scanner entrada = new Scanner(System.in);
@@ -82,15 +80,13 @@ public class Menu {
         }
 
         System.out.println("");
-    }
-    //fin asteriscos
-
+    }//fin asteriscos
+    
     public static void separador() {
         System.out.println("");
         for (int i = 0; i < 80; i++) {
             System.out.printf("_");
         }
         System.out.println("\n");
-    }
-    //fin separador
+    }//fin separador
 }
