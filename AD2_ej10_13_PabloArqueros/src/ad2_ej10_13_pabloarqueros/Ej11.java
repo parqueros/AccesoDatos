@@ -82,7 +82,7 @@ public class Ej11 {
         //declara el fichero de acceso aleatorio
         RandomAccessFile file = new RandomAccessFile(fichero, "rw");
         int posicion = (numEmpleado - 1) * 36; //calculo donde empieza el registro
-        if (posicion > file.length() || posicion < 0) {
+        if (posicion > file.length()-36 || posicion < 0) {
             System.out.println("El empleado con ID: " + numEmpleado + " no existe...");
         } else {
 
@@ -105,7 +105,7 @@ public class Ej11 {
             file.writeDouble(nuevoSalario); //escribo el nuevoSalrio en el fichero
             
             //muestro por pantalla los datos del empleado
-            
+            System.out.printf("\nActualización salario: \n\n");
             System.out.printf("\n%-12s%-6s%-10s%-8s\n\n","Apellido","Dept","Salario","Nuevo Salario");
             System.out.printf("%-12s%-6d%.2f   %.2f\n\n", apellidos, dep, salario, nuevoSalario);
 //            System.out.printf("Apellidos: %s, Departamento: %d, Salario: %.2f ,Nuevo Salario: %.2f\n", apellidos, dep, salario, nuevoSalario);

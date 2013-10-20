@@ -39,9 +39,8 @@ public class Main {
                     Ej11.LeeFichAleatorio();
                     Menu.separador();
                     int numEmple = ES.leeNº("Introduzca el numero de empleado...");
-                    double numAumento = ES.leeNºR("Introduzca el aumento de salario...");
+                    double numAumento = ES.leeNºR("\nIntroduzca el aumento de salario...");
                     Ej11.AumentoSalarial(numEmple, numAumento);
-
 
                     break;
 

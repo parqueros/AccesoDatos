@@ -104,7 +104,7 @@ public class Ej10 {
             salario = file.readDouble(); //obtengo salario
 
             //muestro por pantalla los datos del empleado buscado
-            System.out.printf("El empleado buscado es: \n\n");
+            System.out.printf("\nEl empleado buscado es: \n\n");
             System.out.printf("%-12s%-6s%-8s\n\n","Apellido","Dept","Salario");
             System.out.printf("%-12s%-6d%.2f\n", apellidos, dep, salario);
             
