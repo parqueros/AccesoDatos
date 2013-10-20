@@ -84,7 +84,7 @@ public class Ej10 {
         //declara el fichero de acceso aleatorio
         RandomAccessFile file = new RandomAccessFile(fichero, "r");
         int posicion = (numEmpleado - 1) * 36; //calculo donde empieza el registro
-        if (posicion > file.length() || posicion < 0) {
+        if (posicion > file.length()-36 || posicion < 0) {
             System.out.println("El empleado con ID: " + numEmpleado + " no existe...");
         } else {
 

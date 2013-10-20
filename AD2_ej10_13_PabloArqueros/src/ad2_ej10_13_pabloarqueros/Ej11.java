@@ -105,7 +105,10 @@ public class Ej11 {
             file.writeDouble(nuevoSalario); //escribo el nuevoSalrio en el fichero
             
             //muestro por pantalla los datos del empleado
-            System.out.printf("Apellidos: %s, Departamento: %d, Salario: %.2f ,Nuevo Salario: %.2f\n", apellidos, dep, salario, nuevoSalario);
+            
+            System.out.printf("\n%-12s%-6s%-10s%-8s\n\n","Apellido","Dept","Salario","Nuevo Salario");
+            System.out.printf("%-12s%-6d%.2f   %.2f\n\n", apellidos, dep, salario, nuevoSalario);
+//            System.out.printf("Apellidos: %s, Departamento: %d, Salario: %.2f ,Nuevo Salario: %.2f\n", apellidos, dep, salario, nuevoSalario);
 
 
         }
