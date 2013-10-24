@@ -22,8 +22,7 @@ public class Ej13 {
      * @param salario
      * @throws IOException
      */
-    
-    public static void insertEmpleado(int iden, String apellido,int dep, double salario) throws IOException {
+    public static void insertEmpleado(int iden, String apellido, int dep, double salario) throws IOException {
 
 
         File fichero = new File("EmpleAleatorio.dat"); //fichero
@@ -53,13 +52,16 @@ public class Ej13 {
             } else {
                 System.out.println("No se puede escribir. El registro con ID: " + iden + "está ocupado");
             }
+
         } else {
+            //si fuera del rango existente escribimos con -1 el espacio libre.
+            //Hay que aumentar el tamaño dle fichero
             while (file.length() < posicion) {
                 file.seek(file.length());
                 file.writeInt(-1);
                 file.seek(file.length() + 32);
             }
-
+            //posicionamos y escribimos el nuevo registro en su posición
             file.seek(posicion);
             file.writeInt(iden);
             buffer = new StringBuffer(apellido);
