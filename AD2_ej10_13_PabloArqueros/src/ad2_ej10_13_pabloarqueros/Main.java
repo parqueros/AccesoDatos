@@ -25,7 +25,7 @@ public class Main {
                 case '1':
                     System.out.println("Ejercicio 10\n");
                     Menu.separador();
-                    int numero = ES.leeNº("Introduzca el numero de empleado a buscar...\n");
+                    int numero = ES.leeNº("Introduzca el numero de empleado a buscar...");
                     Ej10.buscaEmpleado(numero);
                     Menu.separador();
                     break;
@@ -50,9 +50,9 @@ public class Main {
                 case '4':
                     System.out.println("Ejercicio 13\n");
                     int numEmplInser = ES.leeNº("Introduzca el numero de empleado a insertar...");
-                    String apellido=ES.leeDeTeclado("Introduzca apellido (max.10 caracteres):\n");
-                    int dep=ES.leeNº("Introduzca numero de departamento:\n");
-                    double salario=ES.leeNºR("Introduzca salario:\n");
+                    String apellido=ES.leeDeTeclado("Introduzca apellido (max.10 caracteres):");
+                    int dep=ES.leeNº("Introduzca numero de departamento:");
+                    double salario=ES.leeNºR("Introduzca salario:");
                     Ej13.insertEmpleado(numEmplInser,apellido,dep,salario);
 //                    Ejercicio13.ejercicioJuan();
                     break;

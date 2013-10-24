@@ -49,6 +49,7 @@ public class Ej13 {
                 file.writeInt(dep); //insertar departamento
                 file.writeDouble(salario); //insertar salario
                 System.out.println("Nuevo registro con ID: " + iden + " creado.");
+                file.close();
             } else {
                 System.out.println("No se puede escribir. El registro con ID: " + iden + "está ocupado");
             }
@@ -69,7 +70,7 @@ public class Ej13 {
             file.writeChars(buffer.toString()); //insertar apellido
             file.writeInt(dep); //insertar departamento
             file.writeDouble(salario); //insertar salario
-            System.out.println("El registro con ID" + iden + "ha sido creado. Se ha aumentado el tamaño del fichero");
+            System.out.println("El registro con ID " + iden + "ha sido creado. Se ha aumentado el tamaño del fichero");
             file.close();
         }
 

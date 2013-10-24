@@ -31,6 +31,8 @@ public class Ej10 {
                 file.writeInt(dep[i]); //insertar departamento (4 bytes)
                 file.writeDouble(salario[i]);//insertar salario (8 bytes)
             }
+            System.out.println("El fichero EmpleAleatorio.dat ha sido creado");
+            file.close();
         } catch (IOException x) {
             System.out.println("I/O Exception: " + x);
 
@@ -39,8 +41,8 @@ public class Ej10 {
 
     public static void LeeFichAleatorio() throws IOException {
 
-        File fichero = new File("EmpleAleatorio.dat");
-        try (RandomAccessFile file = new RandomAccessFile(fichero, "r")) {
+
+        try (RandomAccessFile file = new RandomAccessFile("EmpleAleatorio.dat", "r")) {
             int id, dep, posicion;
             Double salario;
             char apellido[] = new char[10], aux;
@@ -78,7 +80,11 @@ public class Ej10 {
         File fichero = new File("EmpleAleatorio.dat");
         try (RandomAccessFile file = new RandomAccessFile(fichero, "r")) {
             int posicion = (numEmpleado - 1) * 36; //calculo donde empieza el registro
-            if (posicion > file.length() - 36 || posicion < 0) {
+            file.seek(posicion);
+            int valorID = file.readInt();
+            //si el principio del registro está fuera del tamaño del fichero o el valor del ID es -1
+            //el registro no existe
+            if (posicion > file.length() - 36 || posicion < 0 || valorID == -1) {
                 System.out.println("El empleado con ID: " + numEmpleado + " no existe...");
             } else {
 

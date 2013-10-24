@@ -39,10 +39,12 @@ public class Ej12 {
                 file.seek(posicion);
                 file.writeInt(id);
                 System.out.println("Eliminando empleado: " + iden);
-            } else {
-                System.out.println("no existe el empleado: " + iden);
-            }
+                file.close();
+            } 
         }
+        else {
+                System.out.println("No existe el empleado: " + iden);
+            }
 
     }
     
