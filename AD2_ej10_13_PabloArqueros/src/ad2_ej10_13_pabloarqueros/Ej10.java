@@ -18,7 +18,7 @@ public class Ej10 {
 
         File fichero = new File("EmpleAleatorio.dat"); //fichero
         try (RandomAccessFile file = new RandomAccessFile(fichero, "rw")) {
-            String apellido[] = {"ARQUEROS  sdfsdf", "SANTOS    ", "MARTINEZ   ", "PEREZ      ", "EGEA      ", "FORTES    ", "NOJA      "};
+            String apellido[] = {"ARQUEROS  ", "SANTOS    ", "MARTINEZ   ", "PEREZ      ", "EGEA      ", "FORTES    ", "NOJA      "};
             int dep[] = {18, 15, 18, 20, 20, 33, 15}; //departamentos
             double salario[] = {3500.58, 3000.45, 4000.85, 8125.41, 6000.51, 1900.74, 2500.0};//salarios
             StringBuffer buffer = null;// buffer para almacenar apellido

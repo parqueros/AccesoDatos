@@ -31,10 +31,7 @@ public class Ej13 {
         //declara el fichero de acceso aleatorio y modo acceso lectura/escritura
         RandomAccessFile file = new RandomAccessFile(fichero, "rw");
         int id;
-//        String apellido = "GONZALEZ  "; //apellido a insertar
         StringBuffer buffer;
-//        Double salario = 1230.87; //salario
-//        int dep = 69;
         int lreg = 36; //lreg= longitud o tamaño en bytes del registro
         long posicion = (iden - 1) * lreg;
         //si dentro del rango del fichero existente
