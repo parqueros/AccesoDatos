@@ -20,9 +20,13 @@ public class Menu {
 
             System.out.println("\n1. Ejercicio 10 _ Buscar Empleado");
             System.out.println("2. Ejercicio 11 _ Aumento Salario");
-            System.out.println("3. Finalizar el programa \n");
-            car = leer_caracter("Elige opción (1…3): ");
-        } while (car < '1' || car > '3');
+            System.out.println("3. Ejercicio 12 _ Eliminar Empleado");
+            System.out.println("4. Ejercicio 13 _ Insertar Empleado");
+            System.out.println("5. Crear Fichero Empleado Inicial");
+            System.out.println("6. Leer Fichero Empleado.dat");
+            System.out.println("7. Finalizar el programa \n");
+            car = leer_caracter("Elige opción (1…7): ");
+        } while (car < '1' || car > '7');
 
         // Los códigos ASCII de '1' '2' '3' y '4' son correlativos, y se puede comparar (car1 < '1' || car1 > '4')
         // también valdría comparar así: while (car1 != '1' && car1 != '2' && car1!= '3' && car1!= '4')

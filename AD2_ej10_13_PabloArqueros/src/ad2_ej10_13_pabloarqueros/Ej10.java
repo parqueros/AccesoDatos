@@ -24,7 +24,7 @@ public class Ej10 {
         RandomAccessFile file = new RandomAccessFile(fichero, "rw");
 
         //arrays con los datos - apellidos
-        String apellido[] = {"ARQUEROS", "SANTOS", "MARTINEZ", "PEREZ", "EGEA", "FORTES", "NOJA"};
+        String apellido[] = {"ARQUEROS  sdfsdf", "SANTOS    ", "MARTINEZ   ", "PEREZ      ", "EGEA      ", "FORTES    ", "NOJA      "};
         int dep[] = {18, 15, 18, 20, 20, 33, 15}; //departamentos
         double salario[] = {3500.58, 3000.45, 4000.85, 8125.41, 6000.51, 1900.74, 2500.0};//salarios
         StringBuffer buffer = null;// buffer para almacenar apellido
@@ -52,7 +52,7 @@ public class Ej10 {
         posicion = 0; //para situarnos al principio
         file.seek(posicion); /*con while *///apuntador de fichero se sitúa en posicion
         System.out.printf("%-4s%-12s%-6s%-8s\n","ID","Apellido","Dept","Salario");
-        while (file.getFilePointer() < file.length() - 36) { /*con while */
+        while (file.getFilePointer() < file.length()) { /*con while */
             
             file.seek(posicion); //apuntador de fichero se sitúa en posicion
             id = file.readInt(); //obtener id de empleado

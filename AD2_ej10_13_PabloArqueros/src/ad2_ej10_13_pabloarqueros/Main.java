@@ -6,7 +6,6 @@ package ad2_ej10_13_pabloarqueros;
 
 import java.io.IOException;
 
-
 /**
  *
  * @author pabloarqueros
@@ -25,8 +24,6 @@ public class Main {
             switch (car) {
                 case '1':
                     System.out.println("Ejercicio 10\n");
-                    Ej10.EscribeFichAleatorio();
-                    Ej10.LeeFichAleatorio();
                     Menu.separador();
                     int numero = ES.leeNº("Introduzca el numero de empleado a buscar...\n");
                     Ej10.buscaEmpleado(numero);
@@ -36,7 +33,7 @@ public class Main {
 
                 case '2':
                     System.out.println("Ejercicio 11\n");
-                    Ej11.LeeFichAleatorio();
+                    Ej10.LeeFichAleatorio();
                     Menu.separador();
                     int numEmple = ES.leeNº("Introduzca el numero de empleado...");
                     double numAumento = ES.leeNºR("\nIntroduzca el aumento de salario...");
@@ -44,14 +41,43 @@ public class Main {
 
                     break;
 
-                case '3': // ACABAR PROGRAMA
+                case '3':
+                    System.out.println("Ejercicio 12\n");
+                    int numEmpleBorr = ES.leeNº("Introduzca el numero de empleado a eliminar...");
+                    Ej12.eliminaRegistro(numEmpleBorr);
+                    break;
+
+                case '4':
+                    System.out.println("Ejercicio 13\n");
+                    int numEmplInser = ES.leeNº("Introduzca el numero de empleado a insertar...");
+                    String apellido=ES.leeDeTeclado("Introduzca apellido (max.10 caracteres):\n");
+                    int dep=ES.leeNº("Introduzca numero de departamento:\n");
+                    double salario=ES.leeNºR("Introduzca salario:\n");
+                    Ej13.insertEmpleado(numEmplInser,apellido,dep,salario);
+//                    Ejercicio13.ejercicioJuan();
+                    break;
+
+                case '5':
+                    
+                    Ej10.EscribeFichAleatorio();
+                    
+                    break;
+
+                case '6':
+                    
+                    Ej10.LeeFichAleatorio();
+                    
+                    break;
+
+                    
+                case '7': // ACABAR PROGRAMA
                     System.out.println("\nHasta la próxima......Recuerda ");
                     Menu.asteriscos("Si crees que algo es imposible,tú lo harás imposible    (Bruce Lee)");
                     System.out.println("\nBye, bye..\n");
 
 
             }	// fin switch
-        } while (car != '3');
+        } while (car != '7');
 
     }
 }
