@@ -13,9 +13,7 @@ public class ES {
      */
     public static String leeDeTeclado() {
         
-        
-        
-        
+       
         
         
       int tecla;
